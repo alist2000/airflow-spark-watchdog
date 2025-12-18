@@ -1,0 +1,22 @@
+# Airflow Logs
+logs/
+*.log
+*.err
+*.pid
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Generated Reports (Don't upload the outputs!)
+*.pdf
+data/*.pdf
+
+# System Files
+.DS_Store
+.idea/
+.vscode/
+
+# Optional: Large Data
+# (Uncomment the line below if your CSV is bigger than 100MB)
+# data/*.csv
