@@ -4,13 +4,13 @@
 
 An automated data pipeline that monitors delivery performance in real-time. It uses **Apache Spark** to process order logs and **Apache Airflow** to orchestrate "Traffic Light" logic—triggering PDF alerts for the operations team if delivery times breach the SLA threshold (3 Days).
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Orchestration:** Apache Airflow (2.7.1)
 * **Processing:** PySpark (Apache Spark)
 * **Infrastructure:** Docker & Docker Compose
 * **Language:** Python 3.8
 
-## 🚀 How It Works
+## How It Works
 1.  **Ingest:** Spark reads raw order data (CSV) and filters for delivered items.
 2.  **Calculate:** Computes the average time between `order_purchase` and `order_delivered`.
 3.  **Decide:** Uses an Airflow `BranchPythonOperator` to check if `Avg > 3 Days`.
@@ -18,7 +18,7 @@ An automated data pipeline that monitors delivery performance in real-time. It u
     * **Breach:** Generates a "Critical Alert" PDF via `fpdf`.
     * **Normal:** Generates a standard daily report.
 
-## 🏃‍♂️ How to Run
+## How to Run
 
 ### 1. Prerequisites
 * Docker Desktop installed and running.
